@@ -1,3 +1,9 @@
+::selection {
+  color           : $white;
+  background-color: $orange;
+  text-shadow     : none;
+}
+
 .facet-title {
   &::before {
     content         : '';
@@ -17,7 +23,7 @@
       content         : '';
       position        : absolute;
       display         : block;
-      background-color: $black;
+      background-color: $gray-900;
       width           : 100%;
       height          : .25rem;
       top             : 0;
@@ -41,7 +47,7 @@
         margin-left: auto;
       }
     }
-    
+
     font-size: $font-size-base * 1.2;
   }
 }

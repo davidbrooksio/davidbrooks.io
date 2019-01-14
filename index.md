@@ -2,9 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: cv
+layout: default
 title: Home
 class: cv
+type: cv
 
 facets:
   -
@@ -63,3 +64,5 @@ facets:
           -
             4 A-level passes and 11 GCSE passes.
 ---
+
+Download this Curriculum Vitae
