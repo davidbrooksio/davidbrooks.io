@@ -18,7 +18,8 @@ subtitle: Web Developer
 email: david@davidbrooks.io
 description: Lead web developer with over 10 years of experience in HTML, CSS (SASS/SCSS), JS, PHP, Content Management Systems (Joomla, WordPress, Grav).
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://davidbrooks.io" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://davidbrooks.io"
+url: "https://david-bettondesign.github.io/davidbrooks.io"
 twitter_username: davidbrooksio
 github_username:  david-bettondesign
 
