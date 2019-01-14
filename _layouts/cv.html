@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body class="">
+    <h2 class="sr-only">{{ page.title }} - {{ site.title }}</h2>
+
+    <header id="masthead" class="py-4">
+      <div class="container">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="{{ site.url }}"><span class="d-block font-weight-bold">{{ site.title }}</span><span class="d-block small">{ {{ site.subtitle }} }</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-content">
+            <ul class="navbar-nav ml-auto">
+              {% for item in site.data.nav.docs %}
+              <li class="nav-item">
+                <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ site.url }}{{ item.url }}">{{ item.title }}{% if page.url == item.url %} <span class="sr-only">(current)</span>{% endif %}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    {% include hero.html %}
+
+    <main id="main">
+      <div class="container">
+        {{ content }}
+        {% for facet in page.facets %}
+        <div class="row">
+          <div class="col-md-4">
+            <h5>{{ facet.facet_title }}</h5>
+          </div>
+          <div class="col-md-8">
+            {% for item in facet.items %}
+            {% if item.title %}
+            <p class="mb-0">
+              <strong>{{ item.title }}</strong>{% if item.subtitle %} / {{ item.subtitle }}{% endif %}
+            </p>
+            {% endif %}
+            {% if item.term %}
+            <p class="text-secondary text-uppercase small">
+              {{ item.term }}
+            </p>
+            {% endif %}
+            {% for p in item.text %}
+            <p>
+              {{ p }}
+            </p>
+            {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>
