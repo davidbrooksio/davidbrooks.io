@@ -4,6 +4,7 @@
 
 layout: cv
 title: Home
+class: cv
 
 facets:
   -

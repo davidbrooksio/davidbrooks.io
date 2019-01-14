@@ -1,9 +1,19 @@
-<section id="hero">
+<section id="hero" class="py-5 mb-5">
   <div class="container">
-    <div class="jumbotron bg-transparent px-0">
-      <p class="m-0">
-        {{ site.description }}
-      </p>
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="text-orange">{{ site.title }}</h1>
+        <p>
+          {{ site.description }}
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <nav class="nav social-nav pt-lg-5">
+          {% for item in site.data.social.docs %}
+          <a class="nav-link px-0 mr-4" href="{{ item.url }}">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
     </div>
   </div>
 </section>

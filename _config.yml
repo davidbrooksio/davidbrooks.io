@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: David Brooks
-subtitle: Web Developer
+ident: DB.
 email: david@davidbrooks.io
-description: Lead web developer with over 10 years of experience in HTML, CSS (SASS/SCSS), JS, PHP, Content Management Systems (Joomla, WordPress, Grav).
+description: Lead web developer with over 10 years of experience in HTML, CSS (SASS/SCSS), JavaScript, PHP, Content Management Systems (Joomla, WordPress, Grav) and much more.
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://davidbrooks.io"
 url: "https://david-bettondesign.github.io/davidbrooks.io"
