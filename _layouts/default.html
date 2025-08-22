@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body class="{{ page.class }}">
+    <h2 class="sr-only">{{ page.title }} - {{ site.title }}</h2>
+
+    {% include masthead.html %}
+
+    {% include hero.html %}
+
+    <main id="main">
+      <div class="container">
+        <p>
+          New website coming soon(ish)…
+        </p>
+      </div>
+    </main>
+
+    <!-- <main id="main">
+      {% if page.type == "cv" %}
+      <section id="cv" class="py-3 mb-5">
+        <div class="container">
+          {% for facet in page.facets %}
+          <div class="row">
+            <div class="col-md-4">
+              <div class="facet-title position-relative pt-4 mb-md-5">
+                <h5>{{ facet.facet_title }}</h5>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="facet-desc position-relative pt-md-4 mb-5">
+                {% for item in facet.items %}
+                <div class="item mb-4">
+                  {% if item.title %}
+                  <p class="item-title mb-0">
+                    <strong>{{ item.title }}</strong>{% if item.subtitle %} / {{ item.subtitle }}{% endif %}
+                  </p>
+                  {% endif %}
+                  {% if item.term %}
+                  <p class="text-secondary text-uppercase small mb-2">
+                    {{ item.term }}
+                  </p>
+                  {% endif %}
+                  {% for p in item.text %}
+                  <p>
+                    {{ p }}
+                  </p>
+                  {% endfor %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if page.type == "portfolio" %}
+      <section id="portfolio" class="py-3 mb-5">
+        <div class="container">
+          <div class="row px-n1">
+            {% for folio in page.folios %}
+            <div class="col-md-4 p-1">
+              <img src="{{ folio.image }}" alt="{{ folio.title }}" class="img-fluid" />
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+      <section id="content" class="py-3 mb-5">
+        <div class="container">
+          <hr />
+          {{ content }}
+        </div>
+      </section>
+    </main> -->
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>
